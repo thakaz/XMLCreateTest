@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="会社">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="従業員" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int"/>
+              <xs:element name="名前" type="xs:string"/>
+              <xs:element name="年齢" type="xs:int"/>
+              <xs:element name="住所">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="通り" type="xs:string"/>
+                    <xs:element name="市" type="xs:string"/>
+                    <xs:element name="州" type="xs:string"/>
+                    <xs:element name="郵便番号" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="プロジェクト">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="プロジェクト詳細" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="名前" type="xs:string"/>
+                          <xs:element name="期間" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
